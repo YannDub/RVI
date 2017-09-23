@@ -35,5 +35,7 @@ public class NavigationCible : MonoBehaviour {
 			Debug.Log (currentPositionMouse.y / targetScreen.y);
 			this.transform.position = target * (1f - t) + this.initCamPos * t;
 		}
+
+		this.transform.Rotate (Input.GetAxis ("Mouse X") * new Vector3 (0, 1, 0));
 	}
 }
